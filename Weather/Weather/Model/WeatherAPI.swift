@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class WeatherAPI
 {
     static let API_ADDRESS = "https://api.apixu.com/v1/forecast.json?key=63819141cbed4a7282b95424173110"
@@ -72,7 +71,7 @@ class WeatherAPI
         task.resume()
     }
     
-    
+ 
     static func loadWeather(tag: Int, weatherP: DayWeather, calback: @escaping () -> Void) {
         
         let sessionConfig = URLSessionConfiguration.default
@@ -229,6 +228,5 @@ class WeatherAPI
             let data = try? Data(contentsOf: url)
             completionHandler(data)
         }
-    }
-    
+    } 
 }
